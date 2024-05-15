@@ -1,0 +1,36 @@
+CREATE TABLE Doenca(
+	idDoenca TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(30) NOT NULL,
+  tipo VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Cidade(
+	idCidade TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  idDOenca TINYINT,
+  FOREIGN KEY (idDoenca) REFERENCES Doenca(idDOenca),
+  nome VARCHAR(100) NOT NULL 
+);
+
+CREATE TABLE Gravidade(
+	idGravidade TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(15)
+);
+
+CREATE TABLE Pessoa(
+	idPessoa TINYINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  idDOenca TINYINT,
+  FOREIGN KEY (idDoenca) REFERENCES Doenca(idDOenca),
+  idCidade TINYINT,
+  FOREIGN KEY (idCIdade) REFERENCES Cidade(idCidade),
+  idGravidade TINYINT,
+  FOREIGN KEY (idGravidade) REFERENCES Gravidade(idGravidade),
+  nome VARCHAR(100) NOT NULL,
+  idade TINYINT
+);
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+.conteiner{
+    background-color: #403E4F;
+}
+
+.contHeader svg{ 
+    width: 80px;
+    height: 40px;
+    color: #009C9C;
+}
+
+.contHeader a{ 
+    color: #ffff;
+}
+
+.contHeader{
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    width: 35%;
+}

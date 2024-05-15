@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -41,18 +42,20 @@ public class PessoaController {
     @Autowired
     private IGravidade gravidadeDao;
 	
-    
+    @CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/{id}")
 	public Optional<Pessoa> ListPessoa(@PathVariable Integer id){
 		Optional<Pessoa> pessoa = pessoaDao.findById(id);
 		return pessoa;
 	}
 	
+    @CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping
 	public List<Pessoa> ListPessoas(){
 		return (List<Pessoa>) pessoaDao.findAll();
 	}
 	
+    @CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping
 	public Pessoa cadastrarPessoa(@RequestBody PessoaDTO pessoaDTO) {
         Pessoa pessoa = new Pessoa();
@@ -70,6 +73,7 @@ public class PessoaController {
         return pessoaDao.save(pessoa);
     }
 	
+    @CrossOrigin(origins = "http://localhost:3000")
 	@PutMapping("/{id}")
 	public Pessoa AtualizarPessoa(@PathVariable Integer id, @RequestBody PessoaDTO pessoaDTO) {
 		Optional<Pessoa> optionalPessoa = pessoaDao.findById(id);
@@ -91,6 +95,7 @@ public class PessoaController {
         return pessoaDao.save(pessoa);
 	}
 	
+    @CrossOrigin(origins = "http://localhost:3000")
 	@DeleteMapping("/{id}")
 	public Optional<Pessoa> DeletarPessoa(@PathVariable Integer id) {
 		Optional<Pessoa> pessoa = pessoaDao.findById(id);

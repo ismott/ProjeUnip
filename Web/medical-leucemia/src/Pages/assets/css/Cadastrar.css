@@ -1,0 +1,61 @@
+.contCadastro {
+    display: flex;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #403E4F;
+    gap: 70px;
+    flex-direction: column;
+}
+
+.contCadastro h1 {
+    color: #fff;
+}
+
+.form {
+    height: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px #fff solid;
+    padding: 0 25px 0 25px;
+    border-radius: 15px;
+}
+
+.contInput{
+    display: flex;
+    flex-direction: column;
+}
+.contInput label{
+    color: #fff;
+    margin-bottom: 10px; 
+}
+
+.input{
+    border-radius: 15px;
+    border: none;
+    height: 25px;
+    width: 340px;
+}
+
+.botao{
+    background-color: #009C9C;
+    border-radius: 15px;
+    border: none;
+    height: 58px;
+    color: #fff;
+}
+
+.contPessoa{
+    width: 50%;
+    height: 150px;
+    display: flex;
+    gap: 270px;
+    justify-content: flex-start;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 0 0 0 15px;
+}
+
+.contAtributo p{
+    color: #fff;
+}

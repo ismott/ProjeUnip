@@ -28,7 +28,7 @@ public class Pessoa {
 	private Doenca idDoenca;
 	
 	@ManyToOne
-	@JoinColumn(name = "idCIdade", nullable = false)
+	@JoinColumn(name = "idCidade", nullable = false)
 	private Cidade idCidade;
 	
 	public Integer getId() {

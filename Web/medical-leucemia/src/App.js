@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import {Cadastrar} from './Pages';
+import {Cadastrar, Home} from './Pages';
 
 function App() {
   return (
-    <Cadastrar />
+    <Home />
   );
 }
 
